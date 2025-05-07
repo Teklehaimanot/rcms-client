@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Headers from "./components/Headers";
+import Welcome from "./components/Welcome";
 
 function App() {
+  const [count, setCount] = useState(100);
+  const [name, setName] = useState("Abebe");
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+  const decrement = () => {
+    setCount(count - 1);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Headers />
+      <Welcome name="SPHI" age={25} />
+      <Welcome name="RDMC" />
+      <h1>{count}</h1>
+      <h1>{name}</h1>
+      <button onClick={increment}>Add</button>
+      <button onClick={decrement}>Subtract</button>
+      <input
+        type="text"
+        onChange={(event) => setName(event.target.value)}
+        value={name}
+      />
     </div>
   );
 }
