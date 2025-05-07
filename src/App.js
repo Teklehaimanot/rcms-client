@@ -5,7 +5,7 @@ import Welcome from "./components/Welcome";
 
 function App() {
   const [count, setCount] = useState(100);
-  const [name, setName] = useState("Abebe");
+  const [name, setName] = useState("");
 
   const increment = () => {
     setCount(count + 1);
