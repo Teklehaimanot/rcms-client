@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 const Menu = () => {
   return (
     <ul>
-      <Link to="/">
-        <li>Home </li>
-      </Link>
-      <Link to="/about">
-        <li>About </li>
-      </Link>
-      <Link to="/contactUs">
-        <li>ContactUs </li>
-      </Link>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/about">About</Link>
+      </li>
+      <li>
+        <Link to="/contactUs">Contact Us</Link>
+      </li>
     </ul>
   );
 };
